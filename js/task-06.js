@@ -3,7 +3,7 @@ const dataLength = document.querySelector('[data-length]')
     .dataset.length;
 
 textInput.addEventListener("blur", (event) => {
-    let length = event.currentTarget.value.length;
+    let length = event.currentTarget.value.trim().length;
     if (length == dataLength) {
         textInput.classList.add("valid");
         textInput.classList.remove("invalid");
