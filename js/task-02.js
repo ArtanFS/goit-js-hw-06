@@ -14,7 +14,7 @@ ingredients.forEach(ingredient => {
   const item = document.createElement("li");
   item.textContent = ingredient;
   item.classList.add("item");
-  items.push(item.outerHTML);
+  items.push(item);
 })
 
-list.innerHTML = items.join("");
+list.append(...items);
