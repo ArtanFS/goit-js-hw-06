@@ -9,6 +9,7 @@ const amountInput = document.querySelector("#controls")
 const createBtn = document.querySelector("button[data-create]");
 const destroyBtn = document.querySelector("button[data-destroy]");
 const boxes = document.querySelector("#boxes");
+// const 
 
 function createBoxes(amount) {
   let size = 30;
@@ -18,12 +19,13 @@ function createBoxes(amount) {
   }
   boxes.innerHTML = boxesArr.join("");
 
-  for (const box of boxes.children) {
-    box.style.backgroundColor = getRandomHexColor();
-    box.style.height = size + "px";
-    box.style.width = size + "px";
-    size += 10;
-  }
+  [...boxes.children].map(box => {
+  box.style.backgroundColor = getRandomHexColor();
+  box.style.height = size + "px";
+  box.style.width = size + "px";
+  size += 10;
+})
+
   return
 }
 
